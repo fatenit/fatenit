@@ -77,7 +77,7 @@
 
     <!-- Profil -->
     <div class="profile">
-        <img src="https://github.com/fatenit/fatenit/blob/7c2d0cadb356838482ad2638b63c88137fe94c58/file-EGrZGMs3WV5mgdC4QSABj1.webp" alt="Mon profil">
+        <img src="https://raw.githubusercontent.com/fatenit/fatenit/7c2d0cadb356838482ad2638b63c88137fe94c58/file-EGrZGMs3WV5mgdC4QSABj1.webp" alt="Mon profil">
         <h2>Mon Profil</h2>
     </div>
 
@@ -85,16 +85,16 @@
     <div class="video-container">
         <!-- Vidéo 1 : Solo Leveling -->
         <div class="video-card">
-            <img src="https://github.com/fatenit/open/blob/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/images.jpeg" alt="Solo Leveling">
+            <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/images.jpeg" alt="Solo Leveling">
             <h2>Solo Leveling</h2>
-            <a href="https://github.com/fatenit/open/blob/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" class="play-button" target="_blank">▶ Play la vidéo</a>
+            <a href="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" class="play-button" target="_blank">▶ Play la vidéo</a>
         </div>
 
         <!-- Vidéo 2 : Chainsaw Man -->
         <div class="video-card">
-            <img src="https://github.com/fatenit/open/blob/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg" alt="Chainsaw Man">
+            <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg" alt="Chainsaw Man">
             <h2>Chainsaw Man</h2>
-            <a href="https://github.com/fatenit/open/blob/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" class="play-button" target="_blank">▶ Play la vidéo</a>
+            <a href="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" class="play-button" target="_blank">▶ Play la vidéo</a>
         </div>
     </div>
 </body>

@@ -34,6 +34,7 @@
             justify-content: center; /* Centrer les vidéos horizontalement */
             gap: 20px; /* Espacement entre les vidéos */
             flex-wrap: wrap; /* Permet le retour à la ligne sur mobile */
+            margin: 0; /* Enlever les marges */
         }
         .video-card {
             background-color: #222; /* Fond des cartes vidéo */
@@ -41,6 +42,7 @@
             padding: 15px;
             max-width: 300px;
             text-align: center;
+            margin: 0; /* Enlever la marge */
         }
         .video-card img {
             max-width: 100%;
@@ -64,15 +66,18 @@
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Animation pour un effet plus fluide */
         }
         .play-button:hover {
             background-color: white;
             color: black;
+            transform: scale(1.1); /* Effet d'agrandissement au survol */
         }
         video {
             max-width: 100%;
             border-radius: 10px;
             border: 3px solid #FFD700;
+            display: none; /* Cacher la vidéo par défaut */
         }
     </style>
 </head>
@@ -92,8 +97,10 @@
         <div class="video-card">
             <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/images.jpeg" alt="Solo Leveling">
             <h2>Solo Leveling</h2>
-            <!-- Lecture directe avec autoplay -->
-            <video controls autoplay>
+            <!-- Bouton qui déclenche la lecture -->
+            <a href="#" class="play-button" onclick="playVideo('video1')">▶ Play la vidéo</a>
+            <!-- Vidéo cachée initialement -->
+            <video id="video1">
                 <source src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge la lecture des vidéos.
             </video>
@@ -103,12 +110,22 @@
         <div class="video-card">
             <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg" alt="Chainsaw Man">
             <h2>Chainsaw Man</h2>
-            <!-- Lecture directe avec autoplay -->
-            <video controls autoplay>
+            <!-- Bouton qui déclenche la lecture -->
+            <a href="#" class="play-button" onclick="playVideo('video2')">▶ Play la vidéo</a>
+            <!-- Vidéo cachée initialement -->
+            <video id="video2">
                 <source src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge la lecture des vidéos.
             </video>
         </div>
     </div>
+
+    <script>
+        function playVideo(videoId) {
+            var video = document.getElementById(videoId);
+            video.style.display = "block"; // Afficher la vidéo
+            video.play(); // Démarrer la vidéo
+        }
+    </script>
 </body>
 </html>

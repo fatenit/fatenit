@@ -2,157 +2,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Page Vidéo</title>
+    <title>Ma Page Vidéo Optimisée</title>
     <style>
+        /* Styles globaux */
         body {
-            background-color: black; /* Fond noir */
-            color: white; /* Texte en blanc */
+            background-color: black;
+            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center; /* Centrer le contenu */
+            text-align: center;
         }
+
         h1 {
-            color: #FFD700; /* Titre en couleur dorée */
+            color: #FFD700;
             margin: 20px 0;
         }
-        .profile {
-            margin-bottom: 40px; /* Espace entre le profil et les vidéos */
+
+        /* Barre de recherche */
+        .search-bar {
+            margin: 20px;
         }
-        .profile img {
-            max-width: 150px;
-            border: 3px solid #FFD700; /* Bordure dorée */
-            border-radius: 50%; /* Cercle pour l'image du profil */
+
+        .search-bar input {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 1px solid #FFD700;
         }
-        .profile h2 {
-            margin: 10px 0;
-            color: #FFD700; /* Texte du profil en doré */
-        }
+
+        /* Conteneur des vidéos */
         .video-container {
             display: flex;
-            justify-content: center; /* Centrer les vidéos horizontalement */
-            gap: 20px; /* Espacement entre les vidéos */
-            flex-wrap: wrap; /* Permet le retour à la ligne sur mobile */
-            margin: 0; /* Enlever les marges */
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
         }
+
         .video-card {
-            background-color: #222; /* Fond des cartes vidéo */
+            background-color: #222;
             border-radius: 10px;
             padding: 15px;
             max-width: 300px;
             text-align: center;
-            margin: 0; /* Enlever la marge */
         }
+
         .video-card img {
             max-width: 100%;
             height: auto;
-            border: 3px solid #FFD700; /* Bordure dorée */
-            border-radius: 10px; /* Coins arrondis */
+            border: 3px solid #FFD700;
+            border-radius: 10px;
         }
+
         .video-card h2 {
             margin: 10px 0;
             font-size: 18px;
-            color: #FFD700; /* Couleur des titres des vidéos */
-        }
-        .play-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #FFD700; /* Fond doré */
-            color: black; /* Texte noir */
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s; /* Animation pour un effet plus fluide */
-        }
-        .play-button:hover {
-            background-color: white;
-            color: black;
-            transform: scale(1.1); /* Effet d'agrandissement au survol */
-        }
-        video {
-            max-width: 100%;
-            border-radius: 10px;
-            border: 3px solid #FFD700;
-            display: none; /* Cacher la vidéo par défaut */
-        }
-        .download-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #555;
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .download-button:hover {
-            background-color: #FFD700;
+            color: #FFD700;
         }
     </style>
 </head>
 <body>
-    <!-- Titre principal -->
-    <h1>Bienvenue 🤧✨ Opening gratuit</h1>
+    <h1>Bienvenue sur Mon Site</h1>
 
-    <!-- Profil -->
-    <div class="profile">
-        <img src="https://raw.githubusercontent.com/fatenit/fatenit/7c2d0cadb356838482ad2638b63c88137fe94c58/file-EGrZGMs3WV5mgdC4QSABj1.webp" alt="Mon profil">
-        <h2>Mon Profil</h2>
+    <!-- Barre de recherche -->
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Rechercher un animé..." onkeyup="filterVideos()">
     </div>
 
     <!-- Conteneur des vidéos -->
-    <div class="video-container">
-        <!-- Vidéo 1 : Solo Leveling -->
-        <div class="video-card">
-            <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/images.jpeg" alt="Solo Leveling">
-            <h2>Solo Leveling</h2>
-            <!-- Bouton qui déclenche la lecture -->
-            <a href="#" class="play-button" onclick="playVideo(event, 'video1')">▶ Play la vidéo</a>
-            <!-- Vidéo cachée initialement -->
-            <video id="video1" controls>
-                <source src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la lecture des vidéos.
-            </video>
-            <!-- Bouton de téléchargement -->
-            <a href="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" class="download-button" download>🕳️ Télécharger</a>
+    <div class="video-container" id="video-container">
+        <!-- Exemple de carte vidéo -->
+        <div class="video-card" data-title="Shangri-La Frontier">
+            <img src="https://github.com/fatenit/open/blob/7bf8632a2c9bd2e474c31f67a5c6dbc55b2d07c2/chnagro%20la.jpg" alt="Shangri-La Frontier">
+            <h2>Shangri-La Frontier</h2>
         </div>
-
-        <!-- Vidéo 2 : Chainsaw Man -->
-        <div class="video-card">
-            <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg" alt="Chainsaw Man">
-            <h2>Chainsaw Man</h2>
-            <!-- Bouton qui déclenche la lecture -->
-            <a href="#" class="play-button" onclick="playVideo(event, 'video2')">▶ Play la vidéo</a>
-            <!-- Vidéo cachée initialement -->
-            <video id="video2" controls>
-                <source src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la lecture des vidéos.
-            </video>
-            <!-- Bouton de téléchargement -->
-            <a href="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" class="download-button" download>🕳️ Télécharger</a>
+        <div class="video-card" data-title="Beastars">
+            <img src="https://github.com/fatenit/open/blob/7bf8632a2c9bd2e474c31f67a5c6dbc55b2d07c2/Beastars_Anime_Cover_1.jpg" alt="Beastars">
+            <h2>Beastars</h2>
         </div>
     </div>
 
     <script>
-        function playVideo(event, videoId) {
-            event.preventDefault();  // Empêche la page de remonter ou de recharger
+        // Fonction pour filtrer les vidéos
+        function filterVideos() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const videoCards = document.querySelectorAll('.video-card');
 
-            // Cacher toutes les vidéos
-            var allVideos = document.querySelectorAll('video');
-            allVideos.forEach(function(video) {
-                video.pause();  // Stopper la lecture
-                video.style.display = "none";  // Cacher la vidéo
+            videoCards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                card.style.display = title.includes(searchInput) ? 'block' : 'none';
             });
-
-            // Afficher la vidéo et la jouer
-            var video = document.getElementById(videoId);
-            video.style.display = "block";
-            video.play();
         }
     </script>
 </body>

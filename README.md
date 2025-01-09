@@ -69,6 +69,11 @@
             background-color: white;
             color: black;
         }
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 3px solid #FFD700;
+        }
     </style>
 </head>
 <body>
@@ -87,14 +92,22 @@
         <div class="video-card">
             <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/images.jpeg" alt="Solo Leveling">
             <h2>Solo Leveling</h2>
-            <a href="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" class="play-button" target="_blank">▶ Play la vidéo</a>
+            <!-- Lecture directe avec autoplay -->
+            <video controls autoplay>
+                <source src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture des vidéos.
+            </video>
         </div>
 
         <!-- Vidéo 2 : Chainsaw Man -->
         <div class="video-card">
             <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg" alt="Chainsaw Man">
             <h2>Chainsaw Man</h2>
-            <a href="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" class="play-button" target="_blank">▶ Play la vidéo</a>
+            <!-- Lecture directe avec autoplay -->
+            <video controls autoplay>
+                <source src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture des vidéos.
+            </video>
         </div>
     </div>
 </body>

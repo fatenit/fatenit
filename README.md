@@ -1,3 +1,4 @@
+<👾🪽>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -96,34 +97,48 @@
     </style>
 </head>
 <body>
-    <!-- Titre principal -->
     <h1>Bienvenue 🤧✨ Opening gratuit</h1>
 
-    <!-- Profil -->
     <div class="profile">
         <img src="https://raw.githubusercontent.com/fatenit/fatenit/7c2d0cadb356838482ad2638b63c88137fe94c58/file-EGrZGMs3WV5mgdC4QSABj1.webp" alt="Mon profil">
         <h2>Mon Profil</h2>
     </div>
 
-    <!-- Conteneur des vidéos -->
     <div class="video-container">
-        <!-- Vidéo 1 : Solo Leveling -->
         <div class="video-card">
             <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/images.jpeg" alt="Solo Leveling">
             <h2>Solo Leveling</h2>
-            <!-- Bouton qui déclenche la lecture -->
             <a href="#" class="play-button" onclick="playVideo(event, 'video1')">▶ Play la vidéo</a>
-            <!-- Vidéo cachée initialement -->
             <video id="video1" controls>
                 <source src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la lecture des vidéos.
             </video>
-            <!-- Bouton de téléchargement -->
             <a href="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_235757_560.mp4" class="download-button" download>📥 Télécharger</a>
         </div>
 
-        <!-- Vidéo 2 : Chainsaw Man -->
         <div class="video-card">
             <img src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg" alt="Chainsaw Man">
             <h2>Chainsaw Man</h2>
-            <!-- Bouton qui déclen
+            <a href="#" class="play-button" onclick="playVideo(event, 'video2')">▶ Play la vidéo</a>
+            <video id="video2" controls>
+                <source src="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" type="video/mp4">
+            </video>
+            <a href="https://raw.githubusercontent.com/fatenit/open/7a9b81ff379b9c10b20945e26ce476d3dff0d3f1/VID_20250108_204359_261.mp4" class="download-button" download>📥 Télécharger</a>
+        </div>
+    </div>
+
+    <script>
+        function playVideo(event, videoId) {
+            event.preventDefault();
+            var allVideos = document.querySelectorAll('video');
+            allVideos.forEach(function(video) {
+                video.pause();
+                video.style.display = "none";
+            });
+
+            var video = document.getElementById(videoId);
+            video.style.display = "block";
+            video.play();
+        }
+    </script>
+</body>
+</html>
